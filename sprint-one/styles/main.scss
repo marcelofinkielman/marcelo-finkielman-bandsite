@@ -59,7 +59,7 @@
    @include mobdef;
   }
 
-.hero {
+  .hero {
   
     @include flexcenter;
     width: 100%;
@@ -146,7 +146,6 @@
   @include mobile {
   &__pics {
     width: 100%;
-    height: 145px;
     & img {
       width: 100%;
       height: 145px;
@@ -155,11 +154,16 @@
   }
   }
 }
+.footer {
+  color: $white;
+  background-color: $black;
+  
+  @include mobile {
 
-.footer__title {
-  width: 100%;
-  height: 600px;
-  &__title {
-    
+    padding-left: 10px;
+    padding-top: 20px;
+    &__title h2 {
+      font-size: 100px;
+    }
   }
 }
