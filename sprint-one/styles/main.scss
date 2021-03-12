@@ -1,0 +1,139 @@
+@import './partials/variables';
+@import './partials/mixin';
+
+/*body {
+@include mobile {
+  color: $brainflix-blue;
+}
+
+}*/
+.navBar {
+  display: flex;
+  flex-direction: column;
+  background-color: $black;
+  max-height: 80px;
+  max-width: 100%;
+  font-weight: 100;
+  
+  
+
+
+  &__name a, &__links a{
+    text-decoration: none;
+    color: $white;
+  }
+
+  
+  @include mobile {
+    
+    &__name {
+        @include flexcenter;
+        max-height: 30px;
+
+      & a {
+          margin-top: 20px
+      }
+    }
+
+    &__links {
+      @include flexcenter;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 16px;
+    
+    
+      & h2{
+      @include flexcenter;
+      width: 160px;
+      
+      margin-top: 0;
+      padding-bottom: 8px;
+      
+      }
+
+      &__1 {
+      border-bottom: 4px solid white
+      }
+    
+    }
+
+   }
+   @include mobdef;
+  }
+
+  .hero {
+  
+    @include flexcenter;
+    width: 100%;
+    max-height: auto;
+    position: relative;
+
+    @include mobile {
+      &__img {
+      width: 100%;
+      max-height: 183px;
+      
+      }
+      &__overlay {
+        width: 100%;
+        height: 183px;
+        position: absolute;
+        background-color: $black;
+        opacity: 50%;
+      }
+      &__singers {
+          @include marg;
+          color: $white;
+          position: absolute;
+          font-size: 24px;
+          padding-right: 85px;
+          
+        }
+  }
+  @include mobdef 
+}
+
+.about-band {
+  @include flexcenter;
+  flex-direction: column;
+
+  @include mobile {
+
+    width: 100%;
+    max-height: auto;
+    
+
+    &__title {
+      @include flexcenter;
+      width: 288px;
+      justify-content: flex-start;
+      margin: 32px, 0, 24px, 0;
+    }
+
+    &__img {
+      @include marg;
+      width: 288px;
+      max-height: 183px;
+
+      & img {
+        width: 100%;
+       max-height: 183px;
+       
+      }
+
+    &__news {
+      &__quot {
+        @include marg
+      }
+    }
+    
+  }
+  }
+
+ 
+}
+
+
+ 

@@ -1,0 +1,30 @@
+@mixin flexcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin opacity {
+  color: black #323232 opacity 50%;
+};
+
+@mixin mobile {
+  @media (max-width: 360px) {
+    @content
+  } 
+};
+
+@mixin mobdef {
+  h1 {
+    font-size: 24px;
+    line-height: 32px;
+  };
+  h2{
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+}
+@mixin marg {
+  margin: 0 16px;
+}
