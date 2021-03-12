@@ -1,6 +1,8 @@
 @import './partials/variables';
 @import './partials/mixin';
 
+
+
 /*body {
 @include mobile {
   color: $brainflix-blue;
@@ -63,7 +65,7 @@
    @include mobdef;
   }
 
-  .hero {
+.hero {
   
     @include flexcenter;
     width: 100%;
@@ -109,7 +111,9 @@
       @include flexcenter;
       width: 288px;
       justify-content: flex-start;
-      margin: 32px, 0, 24px, 0;
+      margin-top: 32px;
+      margin-bottom: 24px
+      
     }
 
     &__img {
@@ -120,20 +124,31 @@
       & img {
         width: 100%;
        max-height: 183px;
-       
-      }
-
-    &__news {
-      &__quot {
-        @include marg
       }
     }
-    
   }
-  }
-
- 
 }
+.news {
+  display: flex;
+  flex-wrap: wrap;
+  @include marg;
+  @include mobile {
+    &__quot {
+      font-weight: 600;
+      margin-top: 24px;
+      margin-bottom: 32px;
+    }
+
+    &__singer-name {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &__singers {
+      margin-top: 40px;
+      margin-bottom: 24px;
+    }
+  }
 
 
- 
+  }
