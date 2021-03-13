@@ -1,14 +1,16 @@
 @import './partials/variables';
 @import './partials/mixin';
+@import './partials/typography';
+//@use './partials/typography' as *;
 
 
 
-/*body {
-@include mobile {
-  color: $brainflix-blue;
+
+
+body {
+  font-family: 'avenir';
 }
 
-}*/
 .navBar {
   display: flex;
   flex-direction: column;
@@ -163,7 +165,8 @@
     padding-left: 10px;
     padding-top: 20px;
     &__title h2 {
-      font-size: 100px;
+      font-size: 30px;
+      font-family: 'avenir';
     }
   }
 }

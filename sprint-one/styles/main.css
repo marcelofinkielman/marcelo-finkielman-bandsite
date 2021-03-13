@@ -1,9 +1,13 @@
-/*body {
-@include mobile {
-  color: $brainflix-blue;
+@font-face {
+  font-family: "avenir";
+  src: url("../../Assets/Font/AvenirNextProLT/avenir-regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  font-family: "avenir";
 }
 
-}*/
 .navBar {
   display: flex;
   flex-direction: column;
@@ -167,6 +171,7 @@
     padding-top: 20px;
   }
   .footer__title h2 {
-    font-size: 100px;
+    font-size: 30px;
+    font-family: "avenir";
   }
 }/*# sourceMappingURL=main.css.map */
