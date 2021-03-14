@@ -9,10 +9,23 @@
 };
 
 @mixin mobile {
-  @media (max-width: 360px) {
+  @media (max-width: 767px) {
     @content
   } 
 };
+
+@mixin tablet {
+  @media (min-width: 768px){
+    @content
+  }
+};
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+
+  }
+}
+
 
 @mixin mobdef {
   h1 {
@@ -22,9 +35,52 @@
   h2{
     font-size: 14px;
     line-height: 22px;
+    
+  }
+}
+  @mixin tabdef {
+    h1 {
+      font-size: 36px;
+      line-height: 44px;
+    };
+    h2{
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 
+
+@mixin mobmarg {
+  margin: 0 1rem;
 }
-@mixin marg {
-  margin: 0 16px;
+
+
+@mixin mobfoot {
+  &--bold p {
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: bold;
+  }
+  
+  &--address > p:nth-child(1) {
+    margin-bottom: 0;
+    margin-top: 24px;
+  }
+  &--address > p:nth-child(2) {
+    margin-top: 0;
+  }
+  &--address > p:nth-child(3) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@mixin footer {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+@mixin leftright {
+  margin-left: 0;
+  margin-right: 0;
 }

@@ -7,25 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./styles/global.css">
 <link rel="stylesheet" href="./styles/main.css">
 
 <body>
   <nav class="navBar">
-    <div class="navBar__name">
-      <a href="./index.html"> <img src="../sprint-one/Assets/Logo/Logo-bandsite.png" alt=""> </a>
+    <div class="navBar__logo">
+      <a href="./index.html"> <img src="./Assets/Logo/Logo-bandsite.png"> </a>
     </div>
     <div class="navBar__links">
-      <h2 class="navBar__links__1"><a href="">Biography</a></h2>
-      <h2 class="navBar__links__2"><a href="">Shows</a></h2>
+      <h2 class="navBar__links--1"><a href="">Biography</a></h2>
+      <h2 class="navBar__links--2"><a href="">Shows</a></h2>
     </div>
   </nav>
   <section class="hero">
     <img class="hero__img" src="./Assets/Images/hero.jpg" alt="">
     <div class="hero__overlay">
     </div>
-    <h1 class="hero__singers">Gaspard Auge & Xavier de Rosnay</h1>
+    <p class="hero__singers">Gaspard Auge & Xavier de Rosnay</p>
   </section>
   <section class="about-band">
     <h2 class="about-band__title">About the Musicians</h2>
@@ -40,7 +39,7 @@
       be smarter than this’”</p>
     <p class="news__singer-name">- Xavier de Rosnay</p>
     <h4 class="news__singers">Xavier de Rosnay & Gaspard Augé</h4>
-    <div>
+    <div class="news__text">
       <p>Xavier De Ronsay and Gaspard Augé had a few
         mutual friends, who happened to run a record label,
         seeking tracks for a compilation. With an immediate
@@ -80,57 +79,80 @@
     </div>
   </section>
   <footer class="footer">
-    <div class="footer__title">
-    <h2>Get In Touch</h2>
+    <div class="footer__call">
+      <div class="footer__call--title">
+        <h2>Get In Touch</h2>
+      </div>
+      <div class="footer__call--items">
+        <img src="./Assets/Icons/PNG/Icon-instagram.png" alt="">
+        <img src="./Assets/Icons/PNG/Icon-facebook.png" alt="">
+        <img src="./Assets/Icons/PNG/Icon-twitter.png" alt="">
+      </div>
+      <div class="footer__call--logo">
+        <img src="./Assets/Logo/Logo-bandsite.png" alt="">
+      </div>
     </div>
-    <div>
-      <img src="./Assets/Icons/PNG/Icon-instagram.png" alt="">
-      <img src="./Assets/Icons/PNG/Icon-facebook.png" alt="">
-      <img src="./Assets/Icons/PNG/Icon-twitter.png" alt="">
-    </div>
-    <section>
-      <div>
-        <h3>Richard Rovner</h3>
-        <h3>The Bees Knees Management</h3>
-      </div>
-      <div>
-        <p>
-          460 King Street West
-          Toronto, Ontario M5V 1L7
-        </p>
-        <p>
-          info@thebeesknees.com
-        </p>
-      </div>
+    <section class="footer__info">
+      <section class="footer__info__cards">
+        <div class="footer__info__cards--bold">
+          <p>Richard Rovner</p>
+          <p>The Bees Knees Management</p>
+        </div>
+        <div class="footer__info__cards--address">
+          <p>
+            460 King Street West
+          </p>
+          <p>
+            Toronto, Ontario M5V 1L7
+          </p>
+          <p>
+            info@thebeesknees.com
+          </p>
+        </div>
+      </section>
+      <section class="footer__info__cards">
+        <div class="footer__info__cards--bold">
+          <p>Marsha Vlasic</p>
+          <p>Artist Group Internation</p>
+        </div>
+        <div class="footer__info__cards--address">
+          <p>
+            Booking Agent for
+          </p>
+          <p>
+            US / South America / Japan
+          </p>
+          <p>
+            marsha.vlasic@artistgrp.com
+          </p>
+        </div>
+      </section>
+      <section class="footer__info__cards">
+        <div class="footer__info__cards--bold">
+          <p>Russel Warby</p>
+          <p>William Morrir Entertainment</p>
+        </div>
+        <div class="footer__info__cards--address">
+          <p>
+            Booking Agent for
+          </p>
+          <p>
+            UK / EU / AU
+          </p>
+          <p>
+            RLW@wmeentertainment.com
+          </p>
+        </div>
+        
+        
+
+      </section>
     </section>
-    <section>
-      <div>
-        <h3>Marsha Vlasic</h3>
-        <h3>Artist Group Internation</h3>
-      </div>
-      <div>
-        Booking Agent for
-        US / South America / Japan
-      </div>
-      <div>
-        marsha.vlasic@artistgrp.com
-      </div>
-    </section>
-    <section>
-      <div>
-        <h3>Russel Warby</h3>
-        <h3>William Morrir Entertainment</h3>
-      </div>
-      <div>
-        Booking Agent for
-        UK / EU / AU
-      </div>
-      <div>
-        RLW@wmeentertainment.com
-      </div>
-      Copyright The Bees Knees &copy; 2018
-      All Rights Reserved
-    </section>
+<div class="footer__info__cards--copyright">
+          <p>
+            Copyright The Bees Knees &copy; 2018 All Rights Reserved
+          </p>
+        </div>
   </footer>
 
 </body>

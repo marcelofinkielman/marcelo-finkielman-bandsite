@@ -5,31 +5,46 @@
 
 
 
-
-
-body {
-  font-family: 'avenir';
-}
-
 .navBar {
   display: flex;
   flex-direction: column;
   background-color: $black;
-  max-height: 80px;
+  max-height: 5rem;
   max-width: 100%;
   font-weight: 100;
-  &__name a, &__links a{
+  align-items: center;
+  box-sizing: content-box;
+  @include tablet {
+    flex-direction: row;
+    height: 5rem;
+    max-width: 100%;
+  }
+  @include desktop {
+    
+  }
+
+  
+  &__links a{
     text-decoration: none;
     color: $white;
-  }
-  @include mobile {
     
-    &__name {
+  }
+
+    &__logo {
         @include flexcenter;
-        max-height: 30px;
+        height: 1.875rem;
+        @include tablet {
+          margin-left: $tablet-spacing;
+          justify-content: center;
+          height: 10vh;
+          padding-bottom: 0.625rem;
+          
+        }
+        
 
       & a {
-          margin-top: 20px
+    
+         margin-top: 1.25rem;
       }
     }
 
@@ -39,26 +54,38 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 16px;
+    margin-top: 1rem;
+    @include tablet {
+      margin-left: 5rem;
+      justify-content: left;
+      padding-left: 0;
+      padding-right: 0;
+      width: 4.688rem;
+      @include tabdef;
+    }
+    
     
     
       & h2{
       @include flexcenter;
-      width: 160px;
-      
+      width: 50%;
       margin-top: 0;
-      padding-bottom: 8px;
-      
+      padding-bottom: 0.5rem;
+      @include tablet {
+        @include tabdef;
+        padding: 1.563rem;
       }
-
-      &__1 {
-      border-bottom: 4px solid white
+        &:nth-child(1) {
+          border-bottom: 0.25rem solid white;
+          margin-right: 5rem;
+        }
       }
     
-    }
+    
 
   }
    @include mobdef;
+   
   }
 
   .hero {
@@ -67,106 +94,255 @@ body {
     width: 100%;
     max-height: auto;
     position: relative;
+    justify-content: left;
 
-    @include mobile {
       &__img {
       width: 100%;
-      max-height: 183px;
+      height: 60vw;
       background-size: cover;
-      
+
       }
+
+      
       &__overlay {
         width: 100%;
-        height: 183px;
+        height: 60vw;
         position: absolute;
         background-color: $black;
         opacity: 50%;
       }
       &__singers {
-          @include marg;
-          color: $white;
-          position: absolute;
-          font-size: 24px;
-          padding-right: 85px;
-          
+        @include mobmarg;
+        color: $white;
+        position: absolute;
+        font-size: 1.5rem;
+        width: 15rem;
+        max-height: 6.25rem;
+        
+        @include tablet{
+          font-size: 3.5rem;
+          width: 31.25rem;
+          font-family: 'avenir-demi';
+          margin-left: $tablet-spacing;
+
         }
+        
   }
   @include mobdef 
 }
 
 .about-band {
-  @include flexcenter;
-  flex-direction: column;
-
-  @include mobile {
-
-    width: 100%;
-    max-height: auto;
-    
-
+  
     &__title {
-      @include flexcenter;
-      width: 288px;
-      justify-content: flex-start;
-      margin-top: 32px;
-      margin-bottom: 24px
+
       
+      @include mobmarg;
+      @include mobdef;
+      margin-top: 2rem;
+      margin-bottom: 1.5rem; 
+      font-family: 'avenir-demi';
+      font-size: 2rem;
+      font-weight: bold;
+      @include tablet {
+        margin-left: $tablet-spacing;
+      }
+  
+    }
+    &__img {
+      @include mobmarg;
+      @include tablet {
+        margin-left: $tablet-spacing;
+        margin-right: $tablet-spacing;
+      }
+    & img {
+      width: 100%;
+      height: 60vw;
+      }
+    }
+    
+  }
+
+ 
+.news {
+  display: flex;
+  flex-wrap: wrap;
+  @include mobmarg;
+  @include tablet {
+    @include leftright;
+  }
+    &__quot {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      font-family: 'avenir-demi';
+      @include tablet {
+        margin-right: $tablet-spacing;
+        margin-left: $tablet-spacing;
+        font-size: 2.25rem;
+      }
+    }
+    &__singer-name {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      width: 100%;
+      font-family: 'avenir-demi';
+      @include tablet {
+        margin-left: $tablet-spacing;
+        font-size: 1.5rem;
+      }
+    }
+    
+    &__singers {
+      font-family: 'avenir-demi';
+      font-size: 1.2rem;
+      @include tablet {
+        margin-left: $tablet-spacing;
+        margin-bottom: 0;
+        font-size: 2.25rem;
+
+      }
     }
 
-    &__img {
-      @include marg;
-      width: 288px;
-      max-height: 183px;
+    &__text {
+      @include tablet {
+        margin-left: 0.625rem;
+        
+        display: flex;
+        flex-direction: row;
+        & p {
+          margin-left: 0.625rem;
+          margin-right: 1.5rem;
+        }
+      }
+    }
+}
 
-      & img {
-        width: 100%;
-       max-height: 183px;
+.gallery {
+  & h2 {
+
+  }
+  @include mobmarg;
+  @include tablet {
+  @include leftright;
+  }
+  @include tablet {
+    
+    margin: $tablet-spacing;
+    }
+  &__pics {
+    
+    width: 100%;
+    @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    }
+    
+    & img {
+      
+      width: 100%;
+      height: 60vw;
+      margin-bottom: 1rem;
+
+      @include tablet {
+        width: 31.8%;
+        
+        height: 17.5vw;
+        
+        
       }
     }
   }
 }
-.news {
-  display: flex;
-  flex-wrap: wrap;
-  @include marg;
-  @include mobile {
-    &__quot {
-      font-weight: 600;
-      margin-top: 24px;
-      margin-bottom: 16px;
-    }
-
-    &__singers {
-      margin-top: 24px;
-      margin-bottom: 8px;
-    }
-  }
-}
-
-.gallery {
-  @include marg;
-  @include mobile {
-  &__pics {
-    width: 100%;
-    & img {
-      width: 100%;
-      height: 145px;
-      margin-bottom: 16px;
-    }
-  }
-  }
-}
 .footer {
+  @include mobile{
+    
+  }
   color: $white;
   background-color: $black;
-  
-  @include mobile {
+  padding-left: 0.625rem;
+  padding-top: 1.25rem;
 
-    padding-left: 10px;
-    padding-top: 20px;
-    &__title h2 {
-      font-size: 30px;
-      font-family: 'avenir';
+    @include tablet {
+      padding: 1.5rem;
     }
-  }
+    &
+    &__call {
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      &--title h2 {
+      font-size: 2.5rem;
+      font-family: 'avenir-demi';
+    }
+      &--items {
+      
+      display: flex;
+      margin-left: 0.625rem;
+      width: 7.5rem;
+      justify-content: space-between;
+      margin-bottom: 2.375rem;
+      height: 1.375rem;
+      @include tablet {
+        margin-bottom: 0;
+        padding-right: 6.875rem;
+      }
+      
+    }
+    &--logo {
+      @include mobile {
+        display: none;
+        
+    }
+    @include tablet {
+      justify-content: center;
+        align-items: center;
+
+    }
+    }
+    }
+
+    &__info {
+        @include tablet {
+        display: flex;
+        flex: row;
+        justify-content: space-between;
+      }
+      &__cards {
+      @include mobfoot;
+      @include mobdef;
+      @include footer;
+      font-size: 0.875rem;
+      @include tablet {
+        font-size: 1rem;
+      }
+      
+      
+      &--copyright {
+        @include mobile {
+        width: 15rem;
+        }
+        
+        padding-bottom: 1.875rem;
+        & p:nth-child(1) {
+          margin-bottom: 0;
+        }
+        & p:nth-child(2) {
+          margin-top: 0;
+          @include tablet {
+            justify-content: left;
+          }
+        }
+      }
+      }
+    }
+    
+    
+    
 }
