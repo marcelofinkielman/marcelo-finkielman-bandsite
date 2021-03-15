@@ -83,12 +83,17 @@
     width: 4.688rem;
   }
   .navBar__links h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .navBar__links h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .navBar__links h2:nth-child(2) {
+    padding-left: 0;
   }
 }
 .navBar__links h2 {
@@ -104,12 +109,12 @@
     padding: 1.563rem;
   }
   .navBar__links h2 h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
   }
   .navBar__links h2 h2 {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 .navBar__links h2:nth-child(1) {
@@ -120,12 +125,12 @@
   font-weight: 100;
 }
 .navBar h1 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .navBar h2 {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 .hero {
@@ -143,12 +148,22 @@
   height: 60vw;
   background-size: cover;
 }
+@media (min-width: 768px) {
+  .hero__img {
+    height: 52.1vw;
+  }
+}
 .hero__overlay {
   width: 100%;
   height: 60vw;
   position: absolute;
   background-color: #323232;
   opacity: 50%;
+}
+@media (min-width: 768px) {
+  .hero__overlay {
+    height: 52.1vw;
+  }
 }
 .hero__singers {
   margin: 0 1rem;
@@ -160,7 +175,7 @@
 }
 @media (min-width: 768px) {
   .hero__singers {
-    font-size: 3.5rem;
+    font-size: 3.9rem;
     width: 31.25rem;
     font-family: "avenir-demi";
     margin-left: 1.5rem;
@@ -170,15 +185,16 @@
   .hero__singers {
     margin-left: 0;
     margin-left: 11.25rem;
+    font-size: 3.8rem;
   }
 }
 .hero h1 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .hero h2 {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 
 .about-band__title {
@@ -190,17 +206,17 @@
   font-weight: bold;
 }
 .about-band__title h1 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .about-band__title h2 {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 @media (min-width: 768px) {
   .about-band__title {
     margin-left: 1.5rem;
-    font-size: 2.5rem;
+    font-size: 2.1rem;
   }
 }
 @media (min-width: 1280px) {
@@ -283,9 +299,10 @@
     margin-left: 16rem;
     margin-right: 16rem;
     margin-left: 16rem;
-    margin-right: 24rem;
+    margin-right: 18.5rem;
     margin-top: 3rem;
-    font-size: 1.563rem;
+    font-size: 1.4rem;
+    font-family: "avenir-bold";
   }
 }
 .news__singer-name {
@@ -321,13 +338,14 @@
     font-family: "avenir-demi";
   }
 }
-@media (min-width: 768px) and (min-width: 1280px) {
+@media (min-width: 1280px) {
   .news__singers {
     margin-left: 0;
     margin-right: 0;
     margin-left: 16rem;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
+    font-family: "avenir-bold";
   }
 }
 .news__text {
@@ -351,7 +369,7 @@
     margin-right: 0;
     margin-left: 16rem;
     margin-right: 16rem;
-    font-size: 0.938rem;
+    font-size: 0.78rem;
   }
   .news__text p:nth-child(1) {
     margin-left: 0;
@@ -366,8 +384,8 @@
 }
 .gallery h2 {
   font-size: 2.3rem;
-  margin-top: 59px;
-  margin-bottom: 24px;
+  margin-top: 3.688rem;
+  margin-bottom: 1.5rem;
   font-family: "avenir-bold";
 }
 @media (min-width: 768px) {
@@ -469,6 +487,11 @@
     padding-right: 6.875rem;
   }
 }
+@media (min-width: 1280px) {
+  .footer__call--items {
+    margin-left: 1.75rem;
+  }
+}
 @media (max-width: 767px) {
   .footer__call--logo {
     display: none;
@@ -488,8 +511,8 @@
   }
 }
 .footer__info__cards {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
   font-size: 0.875rem;
 }
 .footer__info__cards--bold p {
@@ -499,26 +522,31 @@
 }
 .footer__info__cards--address > p:nth-child(1) {
   margin-bottom: 0;
-  margin-top: 24px;
+  margin-top: 1.5rem;
 }
 .footer__info__cards--address > p:nth-child(2) {
   margin-top: 0;
 }
 .footer__info__cards--address > p:nth-child(3) {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
 }
 .footer__info__cards h1 {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .footer__info__cards h2 {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
 }
 @media (min-width: 768px) {
   .footer__info__cards {
     font-size: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__info__cards {
+    font-size: 0.875rem;
   }
 }
 .footer__info__cards--copyright {
