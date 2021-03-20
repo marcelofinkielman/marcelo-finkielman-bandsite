@@ -263,6 +263,68 @@
   line-height: 1.375rem;
 }
 
+.tickets {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.tickets__firstShow {
+  border-bottom: 1px solid #AFAFAF;
+  margin-bottom: 16px;
+}
+.tickets__show {
+  margin-top: 32px;
+  margin-bottom: 40px;
+  font-weight: 900;
+}
+.tickets__dateTitle {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+.tickets__date {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.tickets__venueTitle {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+.tickets__venue {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+.tickets__locationTitle {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+.tickets__local {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+.tickets__buyTickets {
+  background-color: #323232;
+  color: white;
+  height: 50px;
+  width: 288px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
 .footer {
   color: #FFFFFF;
   background-color: #323232;

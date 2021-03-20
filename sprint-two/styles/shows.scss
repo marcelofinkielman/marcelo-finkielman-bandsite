@@ -203,6 +203,50 @@
   @include mobdef 
 }
 
+.tickets {
+  margin-left: 16px;
+  margin-right: 16px;
+
+  &__firstShow {
+    border-bottom: 1px solid #AFAFAF;
+    margin-bottom: 16px
+    }
+
+  &__show {
+  margin-top: 32px;
+  margin-bottom: 40px;
+  font-weight: 900;
+  }
+
+  &__dateTitle {
+    @include dateTitle;
+  }
+
+  &__date {
+    @include date;
+  }
+
+  &__venueTitle {
+    @include venueTitle;
+  }
+
+  &__venue {
+    @include venue;
+  }
+
+  &__locationTitle {
+    @include locationTitle;
+  }
+
+  &__local {
+    @include local
+  }
+
+  &__buyTickets {
+    @include ticketButton;
+  }
+}
+
 .footer {
   color: $white;
   background-color: $black;
