@@ -84,9 +84,9 @@
     }
 
     &:nth-child(2) { 
-      padding-left: 10px;
+      padding-left: 0.625rem;
       padding-right: 0;
-      padding-right: 10px;
+      padding-right: 0.625rem;
       font-weight: 100;
       border-bottom: 0.25rem solid white;
     }
@@ -112,7 +112,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     @include tablet {
-      height: 670px;
+      height: 41.875rem;
     }
   }   
 
@@ -124,7 +124,7 @@
     opacity: 50%;
     
     @include tablet {
-      height: 670px;
+      height: 41.875rem;
     }
   }
 
@@ -135,13 +135,13 @@
     font-size: 1rem;
     max-width: 100%;
     align-self: flex-start;
-    margin-top: 64px;
+    margin-top: 4rem;
     @include tablet {
       margin-left: $tablet-spacing;
     }
     @include desktop {
       margin-left: $desktop-spacing;
-      margin-top: 164px;
+      margin-top: 10.25rem;
     }
   }
   &__content {
@@ -149,7 +149,7 @@
     color: $white;
     @include mobmarg;
     font-size: 2.2rem;
-    top: 100px;
+    top: 6.25rem;
     height: 10.25rem;
     width: 18rem;
     @include tablet {
@@ -166,30 +166,30 @@
       margin-left: $tablet-spacing;
       
       @include desktop {
-        margin-top: 150px;
+        margin-top: 9.375rem;
         font-size: 3.3rem;
-        width: 500px;
+        width: 31.25rem;
         margin-left: 0;
         
       }
     }
 
       &--play {
-        margin-top: 200px;
+        margin-top: 12.5rem;
         width: 100%;
-        height: 100px;
+        height: 6.25rem;
         border-radius: 4px;
 
         @include tablet {
-          margin-top: 280px;
-          width: 436px;
+          margin-top: 17.5rem;
+          width: 27.25rem;
           height: 10rem;
           margin-left: $tablet-spacing;
         }
         @include desktop {
           position: absolute;
-          margin-top: 160px;
-          margin-left: 550px;
+          margin-top: 10rem;
+          margin-left: 34.375rem;
           
         }
       }
@@ -204,46 +204,211 @@
 }
 
 .tickets {
-  margin-left: 16px;
-  margin-right: 16px;
+  @include mobmarg;
+  @include tablet {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  @include desktop {
+    
+  }
+
+  
+  &__justTitles {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    padding-right: 0.625rem;
+    @include titles;
+    @include mobile{
+      display: none;
+    }
+
+    @include desktop {
+      margin-left: 29.063rem;
+      width: 35rem;
+    }
+
+    &--justVenue {
+      padding-left: 3.75rem;
+    }
+
+    &--justLocation {
+      padding-right: 35px;
+      
+    }
+    
+  }
 
   &__firstShow {
     border-bottom: 1px solid #AFAFAF;
-    margin-bottom: 16px
+    margin-bottom: 1rem;
+    position: relative;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      justify-content: space-between;
+    }  
+    @include desktop {
+      margin-left: 29.063rem;
+      margin-right: 11.25rem;
+      margin-top: 1.875rem;
     }
+  }
+
+  &__secondShow {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: justify;
+    }
+    @include desktop {
+      margin-left: 29.063rem;
+      margin-right: 11.25rem;
+    }
+  }
+
+  &__thirdShow {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include desktop {
+      margin-left: 29.063rem;
+      margin-right: 11.25rem;
+    }
+  }
+
+  &__forthShow {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include desktop {
+      margin-left: 29.063rem;
+      margin-right: 11.25rem;
+    }
+  }
+
+  &__fifthShow {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include desktop {
+      margin-left: 29.063rem;
+      margin-right: 11.25rem;
+    }
+  }
+
+  &__sixthShow {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include desktop {
+      margin-left: 29.063rem;
+      margin-right: 11.25rem;
+    }
+  }
 
   &__show {
-  margin-top: 32px;
-  margin-bottom: 40px;
-  font-weight: 900;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  font-family: 'avenir-bold';
+  font-size: 2.5rem;
+  @include desktop {
+    margin-left: 11.25rem;
+    margin-top: 3rem;
+    position: absolute
+  }
+  }
+
+  &__mainDateTitle {
+    @include titles;
+    @include tablet {
+      display: none;
+    }
+    
+  }
+
+  &__mainVenueTitle {
+    @include titles;
+    @include tablet {
+      display: none;
+    }
+    
+  }
+
+  &__mainLocationTitle {
+    @include titles;
+    @include tablet {
+      display: none;
+    }
   }
 
   &__dateTitle {
-    @include dateTitle;
+    @include titles;
+    @include tablet {
+      display: none;
+      
+    }
   }
 
   &__date {
     @include date;
+    @include tablet {
+      margin-top: 1.25rem;
+      width: 8.438rem;
+      margin-left: 0;
+      
+    }
   }
 
   &__venueTitle {
-    @include venueTitle;
+    @include titles;
+    @include tablet {
+      display: none
+    }
   }
 
   &__venue {
     @include venue;
+    @include tablet {
+      margin-top: 1.25rem;
+      width: 6.25rem
+    }
   }
 
   &__locationTitle {
-    @include locationTitle;
+    @include titles;
+    @include tablet {
+      display: none
+    }
   }
 
   &__local {
-    @include local
+    @include local;
+    @include tablet {
+      margin-top: 1.25rem;
+    }
   }
 
   &__buyTickets {
     @include ticketButton;
+    @include tablet {
+      width: 12.5rem;
+    }
+    @include desktop {
+      width: 10rem;
+    }
   }
 }
 

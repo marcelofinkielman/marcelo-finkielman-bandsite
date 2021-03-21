@@ -99,7 +99,7 @@
   padding-right: 11.25rem;
 }
 
-@mixin dateTitle {
+@mixin titles {
 margin-top: 20px;
 margin-bottom: 16px;
 font-size: 14px;
@@ -114,27 +114,13 @@ color: #AFAFAF;
   font-weight: bold;
 }
 
-@mixin venueTitle {
-  margin-top: 20px;
-  margin-bottom: 16px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #AFAFAF;
-}
-
 @mixin venue {
   margin-top: 0;
   margin-bottom: 24px;
   font-size: 14px;
 }
 
-@mixin locationTitle {
-  margin-top: 20px;
-  margin-bottom: 16px;
-  font-size: 14px;
-  font-weight: bold;
-  color: #AFAFAF;
-}
+
 
 @mixin local {
   margin-top: 0;

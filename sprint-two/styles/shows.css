@@ -121,9 +121,9 @@
   margin-right: 3.5rem;
 }
 .navBar__links h2:nth-child(2) {
-  padding-left: 10px;
+  padding-left: 0.625rem;
   padding-right: 0;
-  padding-right: 10px;
+  padding-right: 0.625rem;
   font-weight: 100;
   border-bottom: 0.25rem solid white;
 }
@@ -157,7 +157,7 @@
 }
 @media (min-width: 768px) {
   .hero__img {
-    height: 670px;
+    height: 41.875rem;
   }
 }
 .hero__overlay {
@@ -169,7 +169,7 @@
 }
 @media (min-width: 768px) {
   .hero__overlay {
-    height: 670px;
+    height: 41.875rem;
   }
 }
 .hero__title {
@@ -179,7 +179,7 @@
   font-size: 1rem;
   max-width: 100%;
   align-self: flex-start;
-  margin-top: 64px;
+  margin-top: 4rem;
 }
 @media (min-width: 768px) {
   .hero__title {
@@ -189,7 +189,7 @@
 @media (min-width: 1280px) {
   .hero__title {
     margin-left: 11.25rem;
-    margin-top: 164px;
+    margin-top: 10.25rem;
   }
 }
 .hero__content {
@@ -197,7 +197,7 @@
   color: #FFFFFF;
   margin: 0 1rem;
   font-size: 2.2rem;
-  top: 100px;
+  top: 6.25rem;
   height: 10.25rem;
   width: 18rem;
 }
@@ -220,22 +220,22 @@
 }
 @media (min-width: 768px) and (min-width: 1280px) {
   .hero__content__singers {
-    margin-top: 150px;
+    margin-top: 9.375rem;
     font-size: 3.3rem;
-    width: 500px;
+    width: 31.25rem;
     margin-left: 0;
   }
 }
 .hero__content__singers--play {
-  margin-top: 200px;
+  margin-top: 12.5rem;
   width: 100%;
-  height: 100px;
+  height: 6.25rem;
   border-radius: 4px;
 }
 @media (min-width: 768px) {
   .hero__content__singers--play {
-    margin-top: 280px;
-    width: 436px;
+    margin-top: 17.5rem;
+    width: 27.25rem;
     height: 10rem;
     margin-left: 1.5rem;
   }
@@ -243,8 +243,8 @@
 @media (min-width: 1280px) {
   .hero__content__singers--play {
     position: absolute;
-    margin-top: 160px;
-    margin-left: 550px;
+    margin-top: 10rem;
+    margin-left: 34.375rem;
   }
 }
 @media (min-width: 1280px) {
@@ -264,17 +264,177 @@
 }
 
 .tickets {
-  margin-left: 16px;
-  margin-right: 16px;
+  margin: 0 1rem;
+}
+@media (min-width: 768px) {
+  .tickets {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+.tickets__justTitles {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  padding-right: 0.625rem;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+@media (max-width: 767px) {
+  .tickets__justTitles {
+    display: none;
+  }
+}
+@media (min-width: 1280px) {
+  .tickets__justTitles {
+    margin-left: 29.063rem;
+    width: 35rem;
+  }
+}
+.tickets__justTitles--justVenue {
+  padding-left: 3.75rem;
+}
+.tickets__justTitles--justLocation {
+  padding-right: 35px;
 }
 .tickets__firstShow {
   border-bottom: 1px solid #AFAFAF;
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .tickets__firstShow {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  .tickets__firstShow {
+    margin-left: 29.063rem;
+    margin-right: 11.25rem;
+    margin-top: 1.875rem;
+  }
+}
+@media (min-width: 768px) {
+  .tickets__secondShow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: justify;
+  }
+}
+@media (min-width: 1280px) {
+  .tickets__secondShow {
+    margin-left: 29.063rem;
+    margin-right: 11.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .tickets__thirdShow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  .tickets__thirdShow {
+    margin-left: 29.063rem;
+    margin-right: 11.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .tickets__forthShow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  .tickets__forthShow {
+    margin-left: 29.063rem;
+    margin-right: 11.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .tickets__fifthShow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  .tickets__fifthShow {
+    margin-left: 29.063rem;
+    margin-right: 11.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .tickets__sixthShow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  .tickets__sixthShow {
+    margin-left: 29.063rem;
+    margin-right: 11.25rem;
+  }
 }
 .tickets__show {
-  margin-top: 32px;
-  margin-bottom: 40px;
-  font-weight: 900;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  font-family: "avenir-bold";
+  font-size: 2.5rem;
+}
+@media (min-width: 1280px) {
+  .tickets__show {
+    margin-left: 11.25rem;
+    margin-top: 3rem;
+    position: absolute;
+  }
+}
+.tickets__mainDateTitle {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+@media (min-width: 768px) {
+  .tickets__mainDateTitle {
+    display: none;
+  }
+}
+.tickets__mainVenueTitle {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+@media (min-width: 768px) {
+  .tickets__mainVenueTitle {
+    display: none;
+  }
+}
+.tickets__mainLocationTitle {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+@media (min-width: 768px) {
+  .tickets__mainLocationTitle {
+    display: none;
+  }
 }
 .tickets__dateTitle {
   margin-top: 20px;
@@ -283,11 +443,23 @@
   font-weight: bold;
   color: #AFAFAF;
 }
+@media (min-width: 768px) {
+  .tickets__dateTitle {
+    display: none;
+  }
+}
 .tickets__date {
   margin-top: 0;
   margin-bottom: 24px;
   font-size: 16px;
   font-weight: bold;
+}
+@media (min-width: 768px) {
+  .tickets__date {
+    margin-top: 1.25rem;
+    width: 8.438rem;
+    margin-left: 0;
+  }
 }
 .tickets__venueTitle {
   margin-top: 20px;
@@ -296,10 +468,21 @@
   font-weight: bold;
   color: #AFAFAF;
 }
+@media (min-width: 768px) {
+  .tickets__venueTitle {
+    display: none;
+  }
+}
 .tickets__venue {
   margin-top: 0;
   margin-bottom: 24px;
   font-size: 14px;
+}
+@media (min-width: 768px) {
+  .tickets__venue {
+    margin-top: 1.25rem;
+    width: 6.25rem;
+  }
 }
 .tickets__locationTitle {
   margin-top: 20px;
@@ -308,10 +491,20 @@
   font-weight: bold;
   color: #AFAFAF;
 }
+@media (min-width: 768px) {
+  .tickets__locationTitle {
+    display: none;
+  }
+}
 .tickets__local {
   margin-top: 0;
   margin-bottom: 24px;
   font-size: 14px;
+}
+@media (min-width: 768px) {
+  .tickets__local {
+    margin-top: 1.25rem;
+  }
 }
 .tickets__buyTickets {
   background-color: #323232;
@@ -323,6 +516,16 @@
   font-size: 15px;
   font-weight: 300;
   margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .tickets__buyTickets {
+    width: 12.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .tickets__buyTickets {
+    width: 10rem;
+  }
 }
 
 .footer {

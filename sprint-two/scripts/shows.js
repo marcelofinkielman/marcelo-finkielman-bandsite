@@ -1,21 +1,39 @@
 const tickets = document.querySelector('.tickets')
-
 const firstShow = document.createElement('div')
-firstShow.classList.add('tickets__firstShow')
-
-
-firstShow.style.marginBottom = '16px'
 const newHeader = document.createElement('h2')
 newHeader.classList.add('tickets__show')
+newHeader.innerText = 'Shows'
+tickets.appendChild(newHeader)
+
 
 //first show card bellow
 
+
+const justTitles = document.createElement('div')
+justTitles.classList.add('tickets__justTitles')
+tickets.appendChild(justTitles)
+
+const justDate = document.createElement('p')
+justDate.classList.add('tickets__justTitles--justDate')
+justDate.innerText = 'DATE'
+justTitles.appendChild(justDate)
+
+const justvenue = document.createElement('p')
+justvenue.classList.add('tickets__justTitles--justVenue')
+justvenue.innerText = 'VENUE'
+justTitles.appendChild(justvenue)
+
+const justLocation = document.createElement('p')
+justLocation.classList.add('tickets__justTitles--justLocation')
+justLocation.innerText = 'LOCATION'
+justTitles.appendChild(justLocation)
+
+firstShow.classList.add('tickets__firstShow')
+firstShow.style.marginBottom = '1rem'
 tickets.appendChild(firstShow)
-firstShow.appendChild(newHeader)
-newHeader.innerText = 'Shows'
 
 const dateTitle = document.createElement('p')
-dateTitle.classList.add('tickets__dateTitle')
+dateTitle.classList.add('tickets__mainDateTitle')
 dateTitle.innerText = 'DATE'
 firstShow.appendChild(dateTitle)
 
@@ -26,7 +44,7 @@ date.innerText = 'Mon Dec 17 2018'
 firstShow.appendChild(date)
 
 const venueTitle = document.createElement('p')
-venueTitle.classList.add('tickets__venueTitle')
+venueTitle.classList.add('tickets__mainVenueTitle')
 venueTitle.innerText = 'VENUE'
 firstShow.appendChild(venueTitle)
 
@@ -36,7 +54,7 @@ venue.innerText = 'Ronald Lane'
 firstShow.appendChild(venue)
 
 const locationTitle = document.createElement('p')
-locationTitle.classList.add('tickets__locationTitle')
+locationTitle.classList.add('tickets__mainLocationTitle')
 locationTitle.innerText = 'LOCATION'
 firstShow.appendChild(locationTitle)
 
@@ -57,7 +75,7 @@ firstShow.appendChild(buyTicket)
  secondShow.classList.add('tickets__secondShow')
  secondShow.style.borderBottom = 'solid 1px'
  secondShow.style.borderBottomColor = '#AFAFAF'
- secondShow.style.marginBottom = '16px'
+ secondShow.style.marginBottom = '1rem'
  tickets.appendChild(secondShow)
 
  const dateTitle2 = document.createElement('p')
@@ -102,7 +120,7 @@ secondShow.appendChild(buyTickets2)
  thirdShow.classList.add('tickets__thirdShow')
  thirdShow.style.borderBottom = 'solid 1px'
  thirdShow.style.borderBottomColor = '#AFAFAF'
- thirdShow.style.marginBottom = '16px'
+ thirdShow.style.marginBottom = '1rem'
  tickets.appendChild(thirdShow)
 
  const dateTitle3 = document.createElement('p')
@@ -146,7 +164,7 @@ thirdShow.appendChild(buyTickets3)
  forthShow.classList.add('tickets__forthShow')
  forthShow.style.borderBottom = 'solid 1px'
  forthShow.style.borderBottomColor = '#AFAFAF'
- forthShow.style.marginBottom = '16px'
+ forthShow.style.marginBottom = '1rem'
  tickets.appendChild(forthShow)
 
  const dateTitle4 = document.createElement('p')
@@ -190,7 +208,7 @@ const fifthShow = document.createElement('div')
 fifthShow.classList.add('tickets__fifthShow')
 fifthShow.style.borderBottom = 'solid 1px'
 fifthShow.style.borderBottomColor = '#AFAFAF'
-fifthShow.style.marginBottom = '16px'
+fifthShow.style.marginBottom = '1rem'
 tickets.appendChild(fifthShow)
 
 const dateTitle5 = document.createElement('p')
@@ -234,7 +252,7 @@ const sixthShow = document.createElement('div')
 sixthShow.classList.add('tickets__sixthShow')
 sixthShow.style.borderBottom = 'solid 1px'
 sixthShow.style.borderBottomColor = '#AFAFAF'
-sixthShow.style.marginBottom = '16px'
+sixthShow.style.marginBottom = '1rem'
 tickets.appendChild(sixthShow)
 
 const dateTitle6 = document.createElement('p')
