@@ -16,6 +16,12 @@
   font-weight: 600;
   font-style: normal;
 }
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 .navBar {
   display: flex;
   flex-direction: column;
@@ -450,6 +456,8 @@
 .comments__form {
   position: relative;
   height: auto;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #AFAFAF;
 }
 .comments__form__divName {
   display: flex;
@@ -491,7 +499,7 @@
   border: 1px solid #AFAFAF;
   height: 80px;
 }
-.comments__form__commentButton {
+.comments__form__divComment__commentButton {
   border: 2px solid red;
   background-color: #323232;
   color: #FFFFFF;

@@ -3,7 +3,11 @@
 @import './partials/typography';
 //@use './partials/typography' as *;
 
-
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
 
 .navBar {
   display: flex;
@@ -340,7 +344,8 @@
   &__form {
     position: relative;
     height: auto;
-    
+    padding-bottom: 32px;
+    border-bottom: 1px solid $silver;
 
     &__divName {
       display: flex;
@@ -386,9 +391,8 @@
         border: 1px solid $silver;
         height: 80px;
       }
-    }
-    
-    &__commentButton {
+
+      &__commentButton {
       border: 2px solid red;
       background-color: $black;
       color: $white;
@@ -397,8 +401,12 @@
       margin-top: 12px;
       border: none;
       border-radius: 4px;
+      }
+    
     }
   }
+
+  &__
  }
 
 .footer {
