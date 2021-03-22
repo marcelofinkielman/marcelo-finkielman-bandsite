@@ -408,6 +408,7 @@ body {
   &__allComments {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 
 
     &__commentContainer {

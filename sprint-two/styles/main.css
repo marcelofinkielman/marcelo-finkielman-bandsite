@@ -512,6 +512,7 @@ body {
 .comments__allComments {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .comments__allComments__commentContainer {
   border-bottom: 1px solid #AFAFAF;

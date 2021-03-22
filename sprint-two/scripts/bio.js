@@ -75,20 +75,6 @@ let defaultComments = [
 ];
 //function for the name, date comment in the comments section.
 let commentArea = document.querySelector('.comments__allComments')
-function displayComments() {
-  
-
-  for (let i = defaultComments.length -1; i >= 0; i--) {
-    addComment(defaultComments[i])
-
-  };
-};
-
-displayComments();
-
-document.querySelector("form.comments__form button").onclick = function (event) {
-  event.preventDefault()
-}
 
 function addComment(comment) {
   let commentContainer = document.createElement('div');
@@ -102,10 +88,49 @@ function addComment(comment) {
   commentsDate.innerText = comment.date;
   commentContainer.appendChild(commentsDate);
   let commentsComment = document.createElement('p');
-  commentsComment.classList.add('comments__allComments__commentCointainer__commentary');
+  commentsComment.classList.add('comments__allComments__commentContainer__commentary');
   commentsComment.innerText = comment.comment;
   commentContainer.appendChild(commentsComment);
   commentArea.insertBefore(commentContainer, commentArea.firstChild)
-  
-  
 }
+
+function displayComments() {
+  for (let i = defaultComments.length -1; i >= 0; i--) {
+    addComment(defaultComments[i])
+  };
+};
+
+displayComments();
+
+
+let submitForm = document.querySelector('.comments__form')
+
+submitForm.addEventListener ('submit', function(event) {
+  event.preventDefault();
+
+  
+  let newName = event.target.querySelector('.comments__form__divName__input').value
+  let newComment = event.target.querySelector('.comments__form__divComment__input').value
+  defaultComments.unshift({
+    name: newName,
+    date: '',
+    comment: newComment,
+  })
+  event.target.reset()
+  displayComments ()
+});
+
+
+
+
+
+/*let currentDay = function() {
+  let today = new Date();
+  let day = today.getDate();
+  let month = today.getMonth();
+  let year = today.getFullYear();
+  if (day < 10) day = '0' + day;
+  if (month < 10) month = '0' + month;
+  return (`${month} / ${day} / ${year}`)
+}*/
+
