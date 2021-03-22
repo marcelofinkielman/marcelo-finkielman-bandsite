@@ -405,8 +405,38 @@ body {
     
     }
   }
+  &__allComments {
+    display: flex;
+    flex-direction: column;
 
-  &__
+
+    &__commentContainer {
+      border-bottom: 1px solid $silver;
+    }
+
+    &__postedComments1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+      &__name {
+      font-weight: bold;
+      }
+
+      &__date {
+      color: $silver;
+      }
+
+      &__commentary {
+      padding-bottom: 24px;
+      border-bottom: 1px solid $silver;
+      font-size: 17.5px;
+      margin-top: 0%;
+    }
+
+
+  }
+  }
+  
  }
 
 .footer {
