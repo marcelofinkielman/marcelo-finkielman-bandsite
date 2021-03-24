@@ -3,54 +3,53 @@
 let comments = document.querySelector('.comments')
 
 let header = document.createElement('p')
-header.classList.add('comments__header')
+header.classList.add('commentsHeader')
 header.innerText = 'Join the Conversation'
 comments.appendChild(header)
 
 let form = document.createElement('form')
-form.classList.add('comments__form')
+form.classList.add('commentsForm')
 comments.appendChild(form)
 
 
-
 let divName = document.createElement('div')
-divName.classList.add('comments__form__divName')
+divName.classList.add('commentsForm__divName')
 form.appendChild(divName)
 
 let profile = document.createElement('img')
-profile.classList.add('comments__form__divName__profile')
+profile.classList.add('commentsForm__divName-profile')
 profile.src = '../Assets/Images/profile.jpg'
 divName.appendChild(profile)
 
 let labelName = document.createElement('label')
-labelName.classList.add('comments__form__divName__labelName')
+labelName.classList.add('commentsForm__divName-labelName')
 labelName.innerText = 'Name'
 divName.appendChild(labelName)
 
 let inputName = document.createElement('input')
-inputName.classList.add('comments__form__divName__input')
+inputName.classList.add('commentsForm__divName-input')
 divName.appendChild(inputName)
 
 let divComment = document.createElement('div')
-divComment.classList.add('comments__form__divComment')
+divComment.classList.add('commentsForm__divComment')
 form.appendChild(divComment)
 
 let labelComment = document.createElement('label')
-labelComment.classList.add('comments__form__divComment__labelComment')
+labelComment.classList.add('commentsForm__divComment-labelComment')
 labelComment.innerText = 'Comment'
 divComment.appendChild(labelComment)
 
 let inputComment = document.createElement('textarea')
-inputComment.classList.add('comments__form__divComment__input')
+inputComment.classList.add('commentsForm__divComment-input')
 divComment.appendChild(inputComment)
 
 let commentButton = document.createElement('button')
-commentButton.classList.add('comments__form__divComment__commentButton')
+commentButton.classList.add('commentsForm__divComment-commentButton')
 commentButton.innerText = 'COMMENT'
 divComment.appendChild(commentButton)
 
 let allComments = document.createElement('div')
-allComments.classList.add('comments__allComments')
+allComments.classList.add('comments-allComments')
 comments.appendChild(allComments)
 
 
@@ -74,50 +73,62 @@ let defaultComments = [
   }
 ];
 //function for the name, date comment in the comments section.
-let commentArea = document.querySelector('.comments__allComments')
+let commentArea = document.querySelector('.comments-allComments')
 
-function addComment(comment) {
-  let commentContainer = document.createElement('div');
-  commentContainer.classList.add('comments__allComments__commentContainer')
-  let commentsName = document.createElement('p');
-  commentsName.classList.add('comments__allComments__commentContainer__name');
-  commentsName.innerText = comment.name;
-  commentContainer.appendChild(commentsName);
-  let commentsDate = document.createElement('p');
-  commentsDate.classList.add('comments__allComments__commentContainer__date');
-  commentsDate.innerText = comment.date;
-  commentContainer.appendChild(commentsDate);
-  let commentsComment = document.createElement('p');
-  commentsComment.classList.add('comments__allComments__commentContainer__commentary');
-  commentsComment.innerText = comment.comment;
-  commentContainer.appendChild(commentsComment);
-  commentArea.insertBefore(commentContainer, commentArea.firstChild)
+  let addComment = (comment) => {
+  let commentContainer = document.createElement('div')
+  commentContainer.classList.add('comments-allComments__commentContainer')
+  commentArea.appendChild(commentContainer)
+  let nameDate = document.createElement('div')
+  nameDate.classList.add('comments-allComments__commentContainer__nameDate')
+  commentContainer.appendChild(nameDate)
+  
+  let commentsName = document.createElement('p')
+  commentsName.classList.add ('comments-allComments__commentContainer__nameDate-name')
+  commentsName.innerText = comment.name
+  nameDate.appendChild(commentsName)
+  let commentsDate = document.createElement('p')
+  commentsDate.classList.add('comments-allComments__commentContainer__nameDate-date')
+  commentsDate.innerText = comment.date
+  nameDate.appendChild(commentsDate)
+  let commentsComment = document.createElement('p')
+  commentsComment.classList.add ('comments-allComments__commentContainer-commentary')
+  commentsComment.innerText = comment.comment
+  commentContainer.appendChild(commentsComment)
 }
 
 function displayComments() {
-  for (let i = defaultComments.length -1; i >= 0; i--) {
-    addComment(defaultComments[i])
-  };
-};
+  commentArea.innerHTML = ''
+for (let i = 0; i < defaultComments.length; i++) {
+  addComment(defaultComments[i])
+} 
+}
 
 displayComments();
 
 
-let submitForm = document.querySelector('.comments__form')
+let newDate = () => {
+  let date = Date.now()
+  let today = new Date(date)
+  return today.toLocaleDateString()
+}
 
-submitForm.addEventListener ('submit', function(event) {
+let submitForm = document.querySelector('.commentsForm')
+
+submitForm.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  
-  let newName = event.target.querySelector('.comments__form__divName__input').value
-  let newComment = event.target.querySelector('.comments__form__divComment__input').value
+
+  let newName = event.target.querySelector('.commentsForm__divName-input').value
+  let newComment = event.target.querySelector('.commentsForm__divComment-input').value
+
   defaultComments.unshift({
     name: newName,
-    date: '',
+    date: newDate(),
     comment: newComment,
   })
   event.target.reset()
-  displayComments ()
+  displayComments()
 });
 
 
