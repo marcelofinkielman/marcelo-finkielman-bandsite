@@ -447,68 +447,68 @@ body {
   margin-right: 16px;
   margin-bottom: 40px;
 }
-.commentsHeader {
+.comments__header {
   font-size: 25px;
   font-family: "avenir-bold";
   margin-bottom: 40px;
   margin-top: 56px;
 }
 @media (min-width: 768px) {
-  .commentsHeader {
+  .comments__header {
     font-size: 35px;
   }
 }
 @media (min-width: 1280px) {
-  .commentsHeader {
+  .comments__header {
     margin-left: 160px;
     font-size: 30px;
   }
 }
-.commentsForm {
+.comments__form {
   position: relative;
   height: auto;
   padding-bottom: 32px;
   border-bottom: 1px solid #AFAFAF;
 }
 @media (min-width: 768px) {
-  .commentsForm {
+  .comments__form {
     margin-left: 120px;
     margin-right: 120px;
   }
 }
 @media (min-width: 1280px) {
-  .commentsForm {
+  .comments__form {
     margin-left: 375px;
     margin-right: 375px;
   }
 }
-.commentsForm__divName {
+.comments__form__divName {
   display: flex;
   flex-direction: row;
   margin-top: 20px;
   justify-content: space-between;
   position: relative;
 }
-.commentsForm__divName-profile {
+.comments__form__divName-profile {
   height: 55px;
   border-radius: 50%;
   margin-right: 20px;
 }
-.commentsForm__divName-labelName {
+.comments__form__divName-labelName {
   position: absolute;
   left: 86px;
   bottom: 55px;
   color: #AFAFAF;
   font-weight: bold;
 }
-.commentsForm__divName-input {
+.comments__form__divName-input {
   height: 40px;
   width: 100%;
   margin-top: 5px;
   border-radius: 4px;
   border: 3px solid #323232;
 }
-.commentsForm__divComment {
+.comments__form__divComment {
   width: auto;
   margin-top: 20px;
   display: flex;
@@ -516,17 +516,17 @@ body {
   margin-left: 80px;
   align-items: flex-end;
 }
-.commentsForm__divComment-labelComment {
+.comments__form__divComment-labelComment {
   color: #AFAFAF;
   font-weight: bold;
   align-self: flex-start;
 }
-.commentsForm__divComment-input {
+.comments__form__divComment-input {
   border: 1px solid #AFAFAF;
   height: 80px;
   align-self: stretch;
 }
-.commentsForm__divComment-commentButton {
+.comments__form__divComment-commentButton {
   border: 2px solid red;
   background-color: #323232;
   color: #FFFFFF;
@@ -537,7 +537,7 @@ body {
   border-radius: 4px;
 }
 @media (min-width: 768px) {
-  .commentsForm__divComment-commentButton {
+  .comments__form__divComment-commentButton {
     width: 200px;
   }
 }
@@ -594,10 +594,10 @@ body {
   }
 }
 .comments-allComments__commentContainer__containAll__nameDate-date {
+  border: 2px solid red;
   color: #AFAFAF;
 }
 .comments-allComments__commentContainer-commentary {
-  padding-bottom: 24px;
   font-size: 17.5px;
   margin-top: 0%;
 }
@@ -611,6 +611,32 @@ body {
 @media (min-width: 768px) {
   .footer {
     padding: 1.5rem;
+  }
+}
+.footer__title {
+  margin-right: 3.125rem;
+}
+.footer__title h2 {
+  font-size: 2.5rem;
+  font-family: "avenir-demi";
+}
+.footer__items {
+  display: flex;
+  margin-left: 0.625rem;
+  width: 7.5rem;
+  justify-content: space-between;
+  margin-bottom: 2.375rem;
+  height: 1.375rem;
+}
+@media (min-width: 768px) {
+  .footer__items {
+    margin-bottom: 0;
+    padding-right: 6.875rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__items {
+    margin-left: 1.75rem;
   }
 }
 @media (min-width: 768px) {
@@ -630,32 +656,6 @@ body {
     position: absolute;
     right: 11.25rem;
     align-items: flex-end;
-  }
-  .footer__call--title {
-    margin-right: 3.125rem;
-  }
-}
-.footer__call--title h2 {
-  font-size: 2.5rem;
-  font-family: "avenir-demi";
-}
-.footer__call--items {
-  display: flex;
-  margin-left: 0.625rem;
-  width: 7.5rem;
-  justify-content: space-between;
-  margin-bottom: 2.375rem;
-  height: 1.375rem;
-}
-@media (min-width: 768px) {
-  .footer__call--items {
-    margin-bottom: 0;
-    padding-right: 6.875rem;
-  }
-}
-@media (min-width: 1280px) {
-  .footer__call--items {
-    margin-left: 1.75rem;
   }
 }
 @media (max-width: 767px) {
