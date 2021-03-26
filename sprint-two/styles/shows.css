@@ -206,34 +206,41 @@
     margin-left: 0;
   }
 }
-.hero__content__singers {
+@media (min-width: 1280px) {
+  .hero__content {
+    margin-left: 0;
+    margin-left: 11.25rem;
+    font-size: 3.2rem;
+  }
+}
+.hero__singers {
   position: absolute;
   margin-top: 0%;
 }
 @media (min-width: 768px) {
-  .hero__content__singers {
+  .hero__singers {
     font-size: 4.2rem;
     width: 40rem;
     font-family: "avenir-demi";
     margin-left: 1.5rem;
   }
 }
-@media (min-width: 768px) and (min-width: 1280px) {
-  .hero__content__singers {
+@media (min-width: 1280px) {
+  .hero__singers {
     margin-top: 9.375rem;
     font-size: 3.3rem;
     width: 31.25rem;
     margin-left: 0;
   }
 }
-.hero__content__singers--play {
+.hero__play {
   margin-top: 12.5rem;
   width: 100%;
   height: 6.25rem;
   border-radius: 4px;
 }
 @media (min-width: 768px) {
-  .hero__content__singers--play {
+  .hero__play {
     margin-top: 17.5rem;
     width: 27.25rem;
     height: 10rem;
@@ -241,17 +248,10 @@
   }
 }
 @media (min-width: 1280px) {
-  .hero__content__singers--play {
+  .hero__play {
     position: absolute;
     margin-top: 10rem;
     margin-left: 34.375rem;
-  }
-}
-@media (min-width: 1280px) {
-  .hero__content {
-    margin-left: 0;
-    margin-left: 11.25rem;
-    font-size: 3.2rem;
   }
 }
 .hero h1 {
@@ -294,10 +294,10 @@
     width: 35rem;
   }
 }
-.tickets__justTitles--justVenue {
+.tickets__justVenue {
   padding-left: 3.75rem;
 }
-.tickets__justTitles--justLocation {
+.tickets__justLocation {
   padding-right: 35px;
 }
 .tickets__firstShow {

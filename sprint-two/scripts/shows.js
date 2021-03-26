@@ -14,17 +14,17 @@ justTitles.classList.add('tickets__justTitles')
 tickets.appendChild(justTitles)
 
 const justDate = document.createElement('p')
-justDate.classList.add('tickets__justTitles--justDate')
+justDate.classList.add('tickets__justDate')
 justDate.innerText = 'DATE'
 justTitles.appendChild(justDate)
 
 const justvenue = document.createElement('p')
-justvenue.classList.add('tickets__justTitles--justVenue')
+justvenue.classList.add('tickets__justVenue')
 justvenue.innerText = 'VENUE'
 justTitles.appendChild(justvenue)
 
 const justLocation = document.createElement('p')
-justLocation.classList.add('tickets__justTitles--justLocation')
+justLocation.classList.add('tickets__justLocation')
 justLocation.innerText = 'LOCATION'
 justTitles.appendChild(justLocation)
 
