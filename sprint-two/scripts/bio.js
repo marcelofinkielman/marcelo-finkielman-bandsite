@@ -75,43 +75,51 @@ let defaultComments = [
 //function for the name, date comment in the comments section.
 let commentArea = document.querySelector('.comments-allComments')
 
-  let addComment = (comment) => {
+let addComment = (comment) => {
   let commentContainer = document.createElement('div')
   commentContainer.classList.add('comments-allComments__commentContainer')
   commentArea.appendChild(commentContainer)
+  let grayCircle = document.createElement ('div')
+  grayCircle.classList.add('comments-allComments__commentContainer__grayCircle')
+  commentContainer.appendChild(grayCircle)
+  let containAll = document.createElement('div')
+  containAll.classList.add('comments-allComments__commentContainer__containAll')
+  commentContainer.appendChild(containAll)
+
   let nameDate = document.createElement('div')
-  nameDate.classList.add('comments-allComments__commentContainer__nameDate')
-  commentContainer.appendChild(nameDate)
-  
+  nameDate.classList.add('comments-allComments__commentContainer__containAll__nameDate')
+  containAll.appendChild(nameDate)
   let commentsName = document.createElement('p')
-  commentsName.classList.add ('comments-allComments__commentContainer__nameDate-name')
+  commentsName.classList.add('comments-allComments__commentContainer__nameDate-name')
   commentsName.innerText = comment.name
   nameDate.appendChild(commentsName)
   let commentsDate = document.createElement('p')
   commentsDate.classList.add('comments-allComments__commentContainer__nameDate-date')
-  commentsDate.innerText = comment.date
+  commentsDate.innerText = newDate(comment.timestamp)
   nameDate.appendChild(commentsDate)
   let commentsComment = document.createElement('p')
-  commentsComment.classList.add ('comments-allComments__commentContainer-commentary')
+  commentsComment.classList.add('comments-allComments__commentContainer-commentary')
   commentsComment.innerText = comment.comment
-  commentContainer.appendChild(commentsComment)
+  containAll.appendChild(commentsComment)
 }
 
-function displayComments() {
+function displayComments(firstComments) {
   commentArea.innerHTML = ''
-for (let i = 0; i < defaultComments.length; i++) {
-  addComment(defaultComments[i])
-} 
+  for (let i = 0; i < firstComments.length; i++) {
+    addComment(firstComments[i])
+  }
 }
 
-displayComments();
 
 
-let newDate = () => {
-  let date = Date.now()
-  let today = new Date(date)
+
+
+let newDate = (commentsTimestamp) => {
+  let today = new Date(commentsTimestamp)
   return today.toLocaleDateString()
 }
+
+
 
 let submitForm = document.querySelector('.commentsForm')
 
@@ -121,27 +129,41 @@ submitForm.addEventListener('submit', function (event) {
 
   let newName = event.target.querySelector('.commentsForm__divName-input').value
   let newComment = event.target.querySelector('.commentsForm__divComment-input').value
+  
 
-  defaultComments.unshift({
-    name: newName,
-    date: newDate(),
-    comment: newComment,
-  })
-  event.target.reset()
-  displayComments()
+  
+  
+  postComment(newName, newComment)
 });
 
 
 
+//===================================== axios ============================
 
+const apiKey = "8ca0d09d-400e-4880-b444-d14536351f0f"
 
-/*let currentDay = function() {
-  let today = new Date();
-  let day = today.getDate();
-  let month = today.getMonth();
-  let year = today.getFullYear();
-  if (day < 10) day = '0' + day;
-  if (month < 10) month = '0' + month;
-  return (`${month} / ${day} / ${year}`)
-}*/
+function getComment() {
+  axios.get(`https://project-1-api.herokuapp.com/comments?api_key=<${apiKey}>`)
+    .then((res) => {
+      console.log(res.data)
+      displayComments(res.data)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+}
+getComment()
 
+function postComment(name, comment) {
+  axios.post(`https://project-1-api.herokuapp.com/comments?api_key=<${apiKey}>`, {
+    "name": name,
+    "comment": comment
+  })
+    .then((res) => {
+      console.log(res)
+      getComment()
+    })
+    .catch(err => {
+      console.log(err)
+    })
+}

@@ -560,30 +560,40 @@ body {
 .comments-allComments__commentContainer {
   border-bottom: 1px solid #AFAFAF;
   flex-direction: row;
-  flex-wrap: wrap;
   display: flex;
-  justify-content: space-between;
 }
-.comments-allComments__commentContainer__nameDate {
+.comments-allComments__commentContainer__grayCircle {
+  background-image: none;
+  background-color: #AFAFAF;
+  border-radius: 50%;
+  height: 2.5em;
+  min-width: 2.5em;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+.comments-allComments__commentContainer__containAll {
+  width: 100%;
+}
+.comments-allComments__commentContainer__containAll__nameDate {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 @media (min-width: 768px) {
-  .comments-allComments__commentContainer__nameDate {
+  .comments-allComments__commentContainer__containAll__nameDate {
     justify-content: unset;
   }
 }
-.comments-allComments__commentContainer__nameDate-name {
+.comments-allComments__commentContainer__containAll__nameDate-name {
   font-weight: bold;
 }
 @media (min-width: 768px) {
-  .comments-allComments__commentContainer__nameDate-name {
+  .comments-allComments__commentContainer__containAll__nameDate-name {
     margin-right: 20px;
   }
 }
-.comments-allComments__commentContainer__nameDate-date {
+.comments-allComments__commentContainer__containAll__nameDate-date {
   color: #AFAFAF;
 }
 .comments-allComments__commentContainer-commentary {
