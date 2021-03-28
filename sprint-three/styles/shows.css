@@ -1,0 +1,623 @@
+@font-face {
+  font-family: "avenir";
+  src: url("../../Assets/Font/AvenirNextProLT/avenir-regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir-demi";
+  src: url("../../Assets/Font/AvenirNextProLT/AvenirNextLTPro-Demi.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "avenir-bold";
+  src: url("../../Assets/Font/AvenirNextProLT/AvenirNextLTPro-Bold.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+.navBar {
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  max-height: 5rem;
+  max-width: 100%;
+  font-weight: 100;
+  align-items: center;
+  box-sizing: content-box;
+}
+@media (min-width: 768px) {
+  .navBar {
+    flex-direction: row;
+    height: 5rem;
+    max-width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .navBar {
+    padding-left: 11.25rem;
+  }
+}
+.navBar__links a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+.navBar__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.875rem;
+}
+@media (min-width: 768px) {
+  .navBar__logo {
+    margin-left: 1.5rem;
+    justify-content: center;
+    height: 10vh;
+    padding-bottom: 0.625rem;
+  }
+}
+@media (min-width: 1280px) {
+  .navBar__logo {
+    margin-left: 0;
+  }
+}
+.navBar__logo a {
+  margin-top: 1.25rem;
+}
+.navBar__links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .navBar__links {
+    margin-left: 5rem;
+    justify-content: left;
+    padding-left: 0;
+    padding-right: 0;
+    width: 4.688rem;
+  }
+  .navBar__links h1 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+  .navBar__links h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .navBar__links h2:nth-child(2) {
+    padding-left: 0;
+  }
+}
+.navBar__links h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-top: 0;
+  padding-bottom: 0.5rem;
+}
+@media (min-width: 768px) {
+  .navBar__links h2 {
+    padding: 1.563rem;
+  }
+  .navBar__links h2 h1 {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+  }
+  .navBar__links h2 h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+.navBar__links h2:nth-child(1) {
+  margin-right: 3.5rem;
+}
+.navBar__links h2:nth-child(2) {
+  padding-left: 0.625rem;
+  padding-right: 0;
+  padding-right: 0.625rem;
+  font-weight: 100;
+  border-bottom: 0.25rem solid white;
+}
+.navBar h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.navBar h2 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.hero {
+  font-family: "avenir-bold";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  max-height: auto;
+  position: relative;
+  justify-content: left;
+  align-items: center;
+}
+.hero__img {
+  background-image: url("../Assets/Images/roger-harris-Sj_FOinWBPI-unsplash.jpg");
+  width: 100%;
+  height: 29.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .hero__img {
+    height: 41.875rem;
+  }
+}
+.hero__overlay {
+  width: 100%;
+  height: 29.5rem;
+  position: absolute;
+  background-color: #323232;
+  opacity: 50%;
+}
+@media (min-width: 768px) {
+  .hero__overlay {
+    height: 41.875rem;
+  }
+}
+.hero__title {
+  margin: 0 1rem;
+  color: #FFFFFF;
+  position: absolute;
+  font-size: 1rem;
+  max-width: 100%;
+  align-self: flex-start;
+  margin-top: 4rem;
+}
+@media (min-width: 768px) {
+  .hero__title {
+    margin-left: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__title {
+    margin-left: 11.25rem;
+    margin-top: 10.25rem;
+  }
+}
+.hero__content {
+  position: absolute;
+  color: #FFFFFF;
+  margin: 0 1rem;
+  font-size: 2.2rem;
+  top: 6.25rem;
+  height: 10.25rem;
+  width: 18rem;
+}
+@media (min-width: 768px) {
+  .hero__content {
+    margin-left: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__content {
+    margin-left: 0;
+    margin-left: 11.25rem;
+    font-size: 3.2rem;
+  }
+}
+.hero__singers {
+  position: absolute;
+  margin-top: 0%;
+}
+@media (min-width: 768px) {
+  .hero__singers {
+    font-size: 4.2rem;
+    width: 40rem;
+    font-family: "avenir-demi";
+    margin-left: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__singers {
+    margin-top: 9.375rem;
+    font-size: 3.3rem;
+    width: 31.25rem;
+    margin-left: 0;
+  }
+}
+.hero__play {
+  margin-top: 12.5rem;
+  width: 100%;
+  height: 6.25rem;
+  border-radius: 4px;
+}
+@media (min-width: 768px) {
+  .hero__play {
+    margin-top: 17.5rem;
+    width: 27.25rem;
+    height: 10rem;
+    margin-left: 1.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__play {
+    position: absolute;
+    margin-top: 10rem;
+    margin-left: 34.375rem;
+  }
+}
+.hero h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.hero h2 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.tickets {
+  margin: 0 1rem;
+}
+@media (min-width: 768px) {
+  .tickets {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+.tickets__justTitles {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  padding-right: 0.625rem;
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+@media (max-width: 767px) {
+  .tickets__justTitles {
+    display: none;
+  }
+}
+@media (min-width: 1280px) {
+  .tickets__justTitles {
+    margin-left: 29.063rem;
+    width: 35rem;
+  }
+}
+.tickets__date {
+  border: 2px solid red;
+  padding-left: 0px;
+  width: 160px;
+}
+.tickets__justVenue {
+  padding-left: 3.75rem;
+}
+.tickets__justLocation {
+  padding-right: 35px;
+}
+.tickets__showContainer {
+  border-bottom: 1px solid #AFAFAF;
+  margin-bottom: 1rem;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .tickets__showContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1280px) {
+  .tickets__showContainer {
+    margin-left: 29.063rem;
+    margin-right: 11.25rem;
+    margin-top: 1.875rem;
+  }
+}
+.tickets__show {
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  font-family: "avenir-bold";
+  font-size: 2.5rem;
+}
+@media (min-width: 1280px) {
+  .tickets__show {
+    margin-left: 11.25rem;
+    margin-top: 3rem;
+    position: absolute;
+  }
+}
+.tickets__mainDateTitle {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+@media (min-width: 768px) {
+  .tickets__mainDateTitle {
+    display: none;
+  }
+}
+.tickets__mainVenueTitle {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+@media (min-width: 768px) {
+  .tickets__mainVenueTitle {
+    display: none;
+  }
+}
+.tickets__wrap {
+  display: flex;
+  flex-direction: row;
+}
+.tickets__mainLocationTitle {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+@media (min-width: 768px) {
+  .tickets__mainLocationTitle {
+    display: none;
+  }
+}
+.tickets__dateTitle {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+@media (min-width: 768px) {
+  .tickets__dateTitle {
+    display: none;
+  }
+}
+.tickets__date {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: bold;
+}
+@media (min-width: 768px) {
+  .tickets__date {
+    margin-top: 1.25rem;
+    width: 8.438rem;
+    margin-left: 0;
+  }
+}
+.tickets__venueTitle {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+@media (min-width: 768px) {
+  .tickets__venueTitle {
+    display: none;
+  }
+}
+.tickets__venue {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  .tickets__venue {
+    width: 300px;
+    margin-top: 1.25rem;
+    width: 10.25rem;
+  }
+}
+.tickets__locationTitle {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #AFAFAF;
+}
+@media (min-width: 768px) {
+  .tickets__locationTitle {
+    display: none;
+  }
+}
+.tickets__location {
+  border: 2px, solid, red;
+  width: 230px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 14px;
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .tickets__location {
+    margin-top: 1.25rem;
+  }
+}
+.tickets__showButton {
+  background-color: #323232;
+  color: white;
+  height: 50px;
+  width: 288px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .tickets__showButton {
+    width: 12.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .tickets__showButton {
+    width: 10rem;
+  }
+}
+
+.footer {
+  color: #FFFFFF;
+  background-color: #323232;
+  padding-left: 0.625rem;
+  padding-top: 1.25rem;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer__call {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__call {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .footer__call--logo {
+    position: absolute;
+    right: 11.25rem;
+    align-items: flex-end;
+  }
+  .footer__call--title {
+    margin-right: 3.125rem;
+  }
+}
+.footer__call--title h2 {
+  font-size: 2.5rem;
+  font-family: "avenir-demi";
+}
+.footer__call--items {
+  display: flex;
+  margin-left: 0.625rem;
+  width: 7.5rem;
+  justify-content: space-between;
+  margin-bottom: 2.375rem;
+  height: 1.375rem;
+}
+@media (min-width: 768px) {
+  .footer__call--items {
+    margin-bottom: 0;
+    padding-right: 6.875rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__call--items {
+    margin-left: 1.75rem;
+  }
+}
+@media (max-width: 767px) {
+  .footer__call--logo {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .footer__call--logo {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .footer__info {
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+  }
+}
+.footer__info__cards {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-size: 0.875rem;
+}
+.footer__info__cards--bold p {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: bold;
+}
+.footer__info__cards--address > p:nth-child(1) {
+  margin-bottom: 0;
+  margin-top: 1.5rem;
+}
+.footer__info__cards--address > p:nth-child(2) {
+  margin-top: 0;
+}
+.footer__info__cards--address > p:nth-child(3) {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+.footer__info__cards h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.footer__info__cards h2 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+@media (min-width: 768px) {
+  .footer__info__cards {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__info__cards {
+    font-size: 0.875rem;
+  }
+}
+.footer__info__cards--copyright {
+  font-size: 0.85rem;
+  padding-bottom: 1.875rem;
+}
+@media (max-width: 767px) {
+  .footer__info__cards--copyright {
+    width: 15rem;
+  }
+}
+.footer__info__cards--copyright p:nth-child(1) {
+  margin-bottom: 0;
+}
+.footer__info__cards--copyright p:nth-child(2) {
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  .footer__info__cards--copyright p:nth-child(2) {
+    justify-content: left;
+  }
+}
+@media (min-width: 1280px) {
+  .footer__info {
+    width: 50rem;
+    margin-top: 1.438rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer {
+    padding: 0.938rem 0;
+    padding-left: 11.25rem;
+    padding-right: 11.25rem;
+  }
+}/*# sourceMappingURL=shows.css.map */
