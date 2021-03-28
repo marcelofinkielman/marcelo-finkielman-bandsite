@@ -292,6 +292,11 @@
     
   }
 
+  &__wrap {
+    display: flex;
+    flex-direction: row
+  }
+
   &__mainLocationTitle {
     @include titles;
     @include tablet {

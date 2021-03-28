@@ -362,6 +362,10 @@
     display: none;
   }
 }
+.tickets__wrap {
+  display: flex;
+  flex-direction: row;
+}
 .tickets__mainLocationTitle {
   margin-top: 20px;
   margin-bottom: 16px;

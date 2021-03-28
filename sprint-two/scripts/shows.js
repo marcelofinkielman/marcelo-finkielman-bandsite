@@ -54,10 +54,10 @@ justDate.classList.add('tickets__justDate')
 justDate.innerText = 'DATE'
 justTitles.appendChild(justDate)
 
-const justvenue = document.createElement('p')
-justvenue.classList.add('tickets__justVenue')
-justvenue.innerText = 'VENUE'
-justTitles.appendChild(justvenue)
+const justVenue = document.createElement('p')
+justVenue.classList.add('tickets__justVenue')
+justVenue.innerText = 'VENUE'
+justTitles.appendChild(justVenue)
 
 const justLocation = document.createElement('p')
 justLocation.classList.add('tickets__justLocation')
@@ -99,22 +99,51 @@ function addShow(show) {
   showVenue.innerText = show.venue
   showLocation.innerText = show.location
 }
+
 for (let i = 0; i < concerts.length; i++) {
   addShow(concerts[i])
 
 }
 
 //===================================== axios =====================================//
- const apiKey = "8ca0d09d-400e-4880-b444-d14536351f0f"
+const apiKey = "8ca0d09d-400e-4880-b444-d14536351f0f"
 
 function getComment() {
   axios
-  .get(`https://project-1-api.herokuapp.com/showdates?api_key=<${apiKey}>`)
+    .get(`https://project-1-api.herokuapp.com/showdates?api_key=<${apiKey}>`)
     .then((res) => {
       console.log(res.data)
+      let showsArray = res.data;
+
+      showsArray.forEach(arrayIndex => {
+
+        let newShowContainer = document.createElement('div')
+        newShowContainer.classList.add('tickets__showContainer')
+        tickets.appendChild(newShowContainer)
+
+        let allDates = document.createElement('p');
+        allDates.classList.add('tickets__date')
+        allDates.innerText = arrayIndex.date
+        newShowContainer.appendChild(allDates)
+
+        let allVenues = document.createElement('p');
+        allVenues.classList.add('tickets__venue')
+        allVenues.innerText = arrayIndex.place
+        newShowContainer.appendChild(allVenues)
+
+        let allLocations = document.createElement('p');
+        allLocations.classList.add('tickets__location')
+        allLocations.innerText = arrayIndex.location
+        newShowContainer.appendChild(allLocations)
+
+        let showButton = document.createElement('button')
+        showButton.classList.add('tickets__showButton')
+        showButton.innerText = 'BUY TICKETS'
+        newShowContainer.appendChild(showButton)
+      });
     })
     .catch(err => {
       console.log(err)
     })
 }
-getComment() 
+getComment()

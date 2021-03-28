@@ -527,7 +527,6 @@ body {
   align-self: stretch;
 }
 .comments__commentButton {
-  border: 2px solid red;
   background-color: #323232;
   color: #FFFFFF;
   width: 100%;
@@ -594,7 +593,6 @@ body {
   }
 }
 .comments__date {
-  border: 2px solid red;
   color: #AFAFAF;
 }
 .comments__commentary {

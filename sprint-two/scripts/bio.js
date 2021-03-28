@@ -98,10 +98,11 @@ let addComment = (commentary) => {
   commentsComment.classList.add('comments__commentary')
   commentsComment.innerText = commentary.comment
   containAll.appendChild(commentsComment)
-  commentArea.insertBefore(commentContainer, commentArea.firstChild)
+  
 }
 
 function displayComments(defaultComments) {
+  
   allComments.innerHTML = ''
   for (let i = defaultComments.length -1; i >= 0; i--) {
     addComment(defaultComments[i])
@@ -119,9 +120,11 @@ let newDate = (commentsTimestamp) => {
 let submitForm = document.querySelector('.comments__form')
 
 submitForm.addEventListener('submit', function (event) {
+  
   event.preventDefault();
   let newName = event.target.querySelector('.comments__input1').value
   let newComment = event.target.querySelector('.comments__input2').value
+  
   
   postComment(newName, newComment)
   
@@ -136,8 +139,9 @@ const apiKey = "8ca0d09d-400e-4880-b444-d14536351f0f"
 function getComment() {
   axios.get(`https://project-1-api.herokuapp.com/comments?api_key=<${apiKey}>`)
     .then((res) => {
-      console.log(res.data)
+      console.log(res)
       displayComments(res.data)
+      
     })
     .catch(err => {
       console.log(err)
