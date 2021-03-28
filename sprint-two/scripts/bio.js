@@ -53,7 +53,7 @@ comments.appendChild(allComments)
 
 
 
-let defaultComments = [
+/* let defaultComments = [
   {
     name: 'Micheal Lyons',
     date: '12/18/2018',
@@ -69,47 +69,44 @@ let defaultComments = [
     date: '11/15/2018',
     comment: 'How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!'
   }
-];
+]; */
 //function for the name, date comment in the comments section.
-let commentArea = document.querySelector('.comments__allComments')
 
-let addComment = (comment) => {
+
+let addComment = (commentary) => {
   let commentContainer = document.createElement('div')
   commentContainer.classList.add('comments__commentContainer')
-  commentArea.appendChild(commentContainer)
-  let grayCircle = document.createElement ('div')
+  allComments.appendChild(commentContainer)
+  let grayCircle = document.createElement('div')
   grayCircle.classList.add('comments__grayCircle')
   commentContainer.appendChild(grayCircle)
   let containAll = document.createElement('div')
   containAll.classList.add('comments__containAll')
   commentContainer.appendChild(containAll)
-
   let nameDate = document.createElement('div')
   nameDate.classList.add('comments__nameDate')
   containAll.appendChild(nameDate)
   let commentsName = document.createElement('p')
   commentsName.classList.add('comments__name')
-  commentsName.innerText = comment.name
+  commentsName.innerText = commentary.name
   nameDate.appendChild(commentsName)
   let commentsDate = document.createElement('p')
   commentsDate.classList.add('comments__date')
-  commentsDate.innerText = newDate(comment.timestamp)
+  commentsDate.innerText = newDate(commentary.timestamp)
   nameDate.appendChild(commentsDate)
   let commentsComment = document.createElement('p')
   commentsComment.classList.add('comments__commentary')
-  commentsComment.innerText = comment.comment
+  commentsComment.innerText = commentary.comment
   containAll.appendChild(commentsComment)
+  commentArea.insertBefore(commentContainer, commentArea.firstChild)
 }
 
-function displayComments(firstComments) {
-  commentArea.innerHTML = ''
-  for (let i = 0; i < firstComments.length; i++) {
-    addComment(firstComments[i])
+function displayComments(defaultComments) {
+  allComments.innerHTML = ''
+  for (let i = defaultComments.length -1; i >= 0; i--) {
+    addComment(defaultComments[i])
   }
 }
-
-
-
 
 
 let newDate = (commentsTimestamp) => {
@@ -123,15 +120,11 @@ let submitForm = document.querySelector('.comments__form')
 
 submitForm.addEventListener('submit', function (event) {
   event.preventDefault();
-
-
   let newName = event.target.querySelector('.comments__input1').value
   let newComment = event.target.querySelector('.comments__input2').value
   
-
-  
-  
   postComment(newName, newComment)
+  
 });
 
 
@@ -160,6 +153,7 @@ function postComment(name, comment) {
     .then((res) => {
       console.log(res)
       getComment()
+      displayComments()
     })
     .catch(err => {
       console.log(err)

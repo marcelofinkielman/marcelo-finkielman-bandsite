@@ -227,6 +227,13 @@
       width: 35rem;
     }
 }
+
+  &__date {
+  
+    padding-left: 0px;
+    width: 160px;
+  }
+
     &__justVenue {
       padding-left: 3.75rem;
     }
@@ -238,7 +245,7 @@
     
   
 
-  &__firstShow {
+  &__showContainer {
     border-bottom: 1px solid $silver;
     margin-bottom: 1rem;
     position: relative;
@@ -256,66 +263,6 @@
     }
   }
 
-  &__secondShow {
-    @include tablet {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      text-align: justify;
-    }
-    @include desktop {
-      margin-left: 29.063rem;
-      margin-right: 11.25rem;
-    }
-  }
-
-  &__thirdShow {
-    @include tablet {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    @include desktop {
-      margin-left: 29.063rem;
-      margin-right: 11.25rem;
-    }
-  }
-
-  &__forthShow {
-    @include tablet {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    @include desktop {
-      margin-left: 29.063rem;
-      margin-right: 11.25rem;
-    }
-  }
-
-  &__fifthShow {
-    @include tablet {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    @include desktop {
-      margin-left: 29.063rem;
-      margin-right: 11.25rem;
-    }
-  }
-
-  &__sixthShow {
-    @include tablet {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-    @include desktop {
-      margin-left: 29.063rem;
-      margin-right: 11.25rem;
-    }
-  }
 
   &__show {
   margin-top: 2rem;
@@ -398,7 +345,7 @@
     }
   }
 
-  &__buyTickets {
+  &__showButton {
     @include ticketButton;
     @include tablet {
       width: 12.5rem;

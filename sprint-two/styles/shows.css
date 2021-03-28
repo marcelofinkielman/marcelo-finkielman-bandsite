@@ -294,19 +294,23 @@
     width: 35rem;
   }
 }
+.tickets__date {
+  padding-left: 0px;
+  width: 160px;
+}
 .tickets__justVenue {
   padding-left: 3.75rem;
 }
 .tickets__justLocation {
   padding-right: 35px;
 }
-.tickets__firstShow {
+.tickets__showContainer {
   border-bottom: 1px solid #AFAFAF;
   margin-bottom: 1rem;
   position: relative;
 }
 @media (min-width: 768px) {
-  .tickets__firstShow {
+  .tickets__showContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -315,76 +319,10 @@
   }
 }
 @media (min-width: 1280px) {
-  .tickets__firstShow {
+  .tickets__showContainer {
     margin-left: 29.063rem;
     margin-right: 11.25rem;
     margin-top: 1.875rem;
-  }
-}
-@media (min-width: 768px) {
-  .tickets__secondShow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: justify;
-  }
-}
-@media (min-width: 1280px) {
-  .tickets__secondShow {
-    margin-left: 29.063rem;
-    margin-right: 11.25rem;
-  }
-}
-@media (min-width: 768px) {
-  .tickets__thirdShow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-@media (min-width: 1280px) {
-  .tickets__thirdShow {
-    margin-left: 29.063rem;
-    margin-right: 11.25rem;
-  }
-}
-@media (min-width: 768px) {
-  .tickets__forthShow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-@media (min-width: 1280px) {
-  .tickets__forthShow {
-    margin-left: 29.063rem;
-    margin-right: 11.25rem;
-  }
-}
-@media (min-width: 768px) {
-  .tickets__fifthShow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-@media (min-width: 1280px) {
-  .tickets__fifthShow {
-    margin-left: 29.063rem;
-    margin-right: 11.25rem;
-  }
-}
-@media (min-width: 768px) {
-  .tickets__sixthShow {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-@media (min-width: 1280px) {
-  .tickets__sixthShow {
-    margin-left: 29.063rem;
-    margin-right: 11.25rem;
   }
 }
 .tickets__show {
@@ -506,7 +444,7 @@
     margin-top: 1.25rem;
   }
 }
-.tickets__buyTickets {
+.tickets__showButton {
   background-color: #323232;
   color: white;
   height: 50px;
@@ -518,12 +456,12 @@
   margin-bottom: 16px;
 }
 @media (min-width: 768px) {
-  .tickets__buyTickets {
+  .tickets__showButton {
     width: 12.5rem;
   }
 }
 @media (min-width: 1280px) {
-  .tickets__buyTickets {
+  .tickets__showButton {
     width: 10rem;
   }
 }
