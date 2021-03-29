@@ -60,7 +60,7 @@
       padding-left: 0;
       padding-right: 0;
       width: 4.688rem;
-      @include tabdef;
+      @include tabletdefault;
     }
     @include desktop {
       & h2:nth-child(2) {
@@ -74,7 +74,7 @@
     margin-top: 0;
     padding-bottom: 0.5rem;
     @include tablet {
-      @include tabdef;
+      @include tabletdefault;
       padding: 1.563rem;
     }
 
@@ -92,7 +92,7 @@
     }
   }
   }
-   @include mobdef;
+   @include mobileDefault;
   }
 .hero {
   font-family: 'avenir-bold';
@@ -129,7 +129,7 @@
   }
 
   &__title {
-    @include mobmarg;
+    @include mobileMargin;
     color: $white;
     position: absolute;
     font-size: 1rem;
@@ -147,7 +147,7 @@
   &__content {
     position: absolute;
     color: $white;
-    @include mobmarg;
+    @include mobileMargin;
     font-size: 2.2rem;
     top: 6.25rem;
     height: 10.25rem;
@@ -199,10 +199,10 @@
       }
   
  
-  @include mobdef 
+  @include mobileDefault 
 }
 .tickets {
-  @include mobmarg;
+  @include mobileMargin;
   @include tablet {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
@@ -229,7 +229,7 @@
 }
 
   &__date {
-  border: 2px solid red;
+
     padding-left: 0px;
     width: 160px;
   }
@@ -245,6 +245,7 @@
   
 
   &__showContainer {
+    
     border-bottom: 1px solid $silver;
     margin-bottom: 1rem;
     position: relative;
@@ -440,7 +441,7 @@
 
   &__cards {
     @include mobfoot;
-    @include mobdef;
+    @include mobileDefault;
     @include footer;
     font-size: 0.875rem;
     @include tablet {
@@ -474,6 +475,6 @@
   }
   @include desktop {
   padding: 0.938rem 0;
-  @include deskpadding;
+  @include desktopPadding;
   }   
 }

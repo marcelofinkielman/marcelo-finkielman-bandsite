@@ -26,6 +26,7 @@ divName.appendChild(labelName)
 
 let inputName = document.createElement('input')
 inputName.classList.add('comments__input1')
+inputName.placeholder = 'Add your name'
 divName.appendChild(inputName)
 
 let divComment = document.createElement('div')
@@ -39,6 +40,7 @@ divComment.appendChild(labelComment)
 
 let inputComment = document.createElement('textarea')
 inputComment.classList.add('comments__input2')
+inputComment.placeholder = 'Add a new comment'
 divComment.appendChild(inputComment)
 
 let commentButton = document.createElement('button')
@@ -111,7 +113,7 @@ function displayComments(defaultComments) {
 
 
 let newDate = (commentsTimestamp) => {
-  let today = new Date(commentsTimestamp)
+  let today = new Date()
   return today.toLocaleDateString()
 }
 
@@ -121,13 +123,18 @@ let submitForm = document.querySelector('.comments__form')
 
 submitForm.addEventListener('submit', function (event) {
   
+
+
   event.preventDefault();
   let newName = event.target.querySelector('.comments__input1').value
   let newComment = event.target.querySelector('.comments__input2').value
-  
+
+  if (newName == false || newComment == false) {
+    window.alert('no')
+}
   
   postComment(newName, newComment)
-  
+  event.target.reset()
 });
 
 
@@ -139,6 +146,7 @@ const apiKey = "8ca0d09d-400e-4880-b444-d14536351f0f"
 function getComment() {
   axios.get(`https://project-1-api.herokuapp.com/comments?api_key=<${apiKey}>`)
     .then((res) => {
+      
       console.log(res)
       displayComments(res.data)
       
@@ -158,6 +166,7 @@ function postComment(name, comment) {
       console.log(res)
       getComment()
       displayComments()
+     
     })
     .catch(err => {
       console.log(err)

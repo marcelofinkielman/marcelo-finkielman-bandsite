@@ -543,6 +543,7 @@ body {
 .comments__allComments {
   display: flex;
   flex-direction: column;
+  border-bottom: 5px;
 }
 @media (min-width: 768px) {
   .comments__allComments {

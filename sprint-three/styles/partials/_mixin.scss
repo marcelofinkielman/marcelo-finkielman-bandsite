@@ -27,7 +27,7 @@
 };
 
 
-@mixin mobdef {
+@mixin mobileDefault {
   h1 {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -38,7 +38,7 @@
     
   }
 }
-  @mixin tabdef {
+  @mixin tabletdefault {
     h1 {
       font-size: 2.25rem;
       line-height: 2.75rem;
@@ -50,7 +50,7 @@
   }
 
 
-@mixin mobmarg {
+@mixin mobileMargin {
   margin: 0 1rem;
 }
 
@@ -85,16 +85,16 @@
   margin-right: 0;
 }
 
-@mixin deskmarg {
+@mixin desktopMargin {
   margin-left: 11.25rem;
   margin-right: 11.25rem;
 }
-@mixin deskmarg2 {
+@mixin desktopMargin2 {
   margin-left: 16rem;
   margin-right: 16rem;
 }
 
-@mixin deskpadding {
+@mixin desktopPadding {
   padding-left: 11.25rem;
   padding-right: 11.25rem;
 }
